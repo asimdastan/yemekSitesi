@@ -1,0 +1,85 @@
+<% include ../partials/header %>
+<div class="container"><hr>
+	<div class="row">
+		<div class="col-md-9 ">
+			<h1 style="text-align:center;"> YEMEKLER </h1>
+			<div class="row">
+				<% yemekler.forEach(function(yemek){ %>
+				<div class="col-md-4 col-sm-6">
+						<div class="thumbnail">
+							<img src="<%= yemek.resim %>">
+							<div class="caption text-center">
+								<h3><%= yemek.adi %></h3>
+								<p>
+									<a href="/yemekler/<%= yemek._id %>" class="btn btn-primary">Daha Fazla Bilgi</a>
+								</p>
+							</div>
+						</div>
+				</div>
+				<%	}); %>
+			</div>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<h1 style="text-align:center;">Aşcılarımız</h1>
+			<div class="card hovercard">
+				<div class="cardheader">
+				</div>
+				<div class="avatar">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg">
+				</div>
+				<div class="info">
+					<div class="title">
+						<a href="#">Asım Daştan</a>
+					</div>
+					<div class="desc"> Lorem Ipsum Donet</div>
+					<div class="desc"> Lorem Ipsum </div>
+					<div class="desc"> Lorem Ipsum </div>
+				</div>
+				<div class="bottom">
+					<a class="btn btn-primary btn-twitter btn-sm" href="#">
+							<i class="fa fa-twitter"></i>
+					</a>
+					<a class="btn btn-danger btn-sm" rel="publisher" href="#">
+							<i class="fa fa-google-plus" aria-hidden="true"></i>
+					</a>
+					<a class="btn btn-primary btn-sm" rel="publisher" href="#">
+							<i class="fa fa-facebook" aria-hidden="true"></i>
+					</a>
+					<a class="btn btn-primary btn-sm" rel="publisher" href="#">
+							<i class="fa fa-linkedin" aria-hidden="true"></i>
+					</a>
+				</div>
+			</div>
+			<div class="card hovercard">
+					<div class="cardheader">
+					</div>
+					<div class="avatar">
+						<img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Default-avatar.jpg">
+					</div>
+					<div class="info">
+						<div class="title">
+							<a href="#">Yasin</a>
+						</div>
+						<div class="desc"> Lorem Ipsum Donet</div>
+						<div class="desc"> Lorem Ipsum </div>
+						<div class="desc"> Lorem Ipsum </div>
+					</div>
+					<div class="bottom">
+						<a class="btn btn-primary btn-twitter btn-sm" href="#">
+								<i class="fa fa-twitter"></i>
+						</a>
+						<a class="btn btn-danger btn-sm" rel="publisher" href="#">
+								<i class="fa fa-google-plus" aria-hidden="true"></i>
+						</a>
+						<a class="btn btn-primary btn-sm" rel="publisher" href="#">
+								<i class="fa fa-facebook" aria-hidden="true"></i>
+						</a>
+						<a class="btn btn-primary btn-sm" rel="publisher" href="#">
+								<i class="fa fa-linkedin" aria-hidden="true"></i>
+						</a>
+					</div>
+				</div>
+		</div>
+	</div>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="thumbnail">
+				<h1><%= yemek.adi %></h1>
+				<div class="thumbnail">
+					<div class="thumbnail">
+						<img class="img-responsive" src="<%= yemek.resim %>" alt="yemek" style="width:100%;">
+					</div>
+					<div class="thumbnail" style="margin:10px 10px;">
+						<div class="caption-full">
+							<p style="margin:10px 10px;" >
+								<strong>Yemegi Ekleyen: </strong> <i><%= yemek.olusturan.username %></i>
+							</p>
+							<a style="margin:10px 10px;"  href="/yemekler/<%= yemek._id%>/duzenle" class="btn btn-default">
+								<i class="fa fa-pencil-square-o"> Duzenle</i>
+							</a>
+							<form action="/yemekler/<%=yemek._id%>?_method=DELETE" method="POST" style="display:inline;margin:10px 10px; ">
+								<button class="btn btn-danger">Sil</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h1 style="padding-left:8rem;">Tarifi</h1>
+			<div class="thumbnail" style="width: 100%;background:#e9e9e9;float:left;word-wrap: break-word;">
+				<p><%= yemek.aciklama %></p>
+			</div>	
+		</div>
+	</div>
+</div>
+<% include ../partials/footer %>
